@@ -24,5 +24,5 @@ from huobi.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('huobi/', archive),
-
+    path('index/', index),
 ]

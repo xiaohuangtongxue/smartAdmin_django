@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from django.conf.global_settings import STATICFILES_DIRS
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'smartAdminOnDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -104,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
 TIME_ZONE = 'UTC'
 
@@ -114,8 +115,36 @@ USE_L10N = True
 
 USE_TZ = True
 
+MIDDLEWARE_CLASSES = (
+    'django.middleware.locale.LocaleMiddleware',
+)
+ 
+ 
 
-# Static files (CSS, JavaScript, Images)
+LANGUAGES = (
+    ('en', ('English')),
+    ('zh-hans', ('hans')),
+)
+#翻译文件所在目录，需要手工创建
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
+ 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.core.context_processors.i18n",
+)
+
+#Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'common_static'),
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
+# 这个是默认设置，Django 默认会在 STATICFILES_DIRS中的文件夹 和 各app下的static文件夹中找文件
+# 注意有先后顺序，找到了就不再继续找了
+STATICFILES_FINDERS = (
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder"
+)
