@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import  include, url
 from django.contrib import admin
+from django.contrib.admindocs.views import BookmarkletsView
 admin.autodiscover()
 from huobi.views import *
 
@@ -25,4 +26,19 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('huobi/', archive),
     path('index/', index),
+    path('order/add', orderAdd),
+    path('order/list', orderList),
+    path('order/composeOrderList', composeOrderList),
+    path('order/composeReturn', composeReturn),
+    path('member/pricingTable', pricingTable),
+    path('purchase/compose', purchaseCompose),
+    path('purchase/return', purchaseReturn),
+    path('purchase/suppliers', suppliers),
+    path('stock/compose', composeStock),
+    path('stock/inputOutput', stockInOut),
+    path('stock/warning', stockWarning), 
+    path('car/list', carList), 
+    path('car/evaluate', carEvaluate), 
+    path('car/owerNotify', owerNotify),
+    path('car/appointment', appointment),
 ]

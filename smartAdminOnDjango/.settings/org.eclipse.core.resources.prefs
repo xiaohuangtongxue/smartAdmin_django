@@ -1,4 +1,9 @@
 eclipse.preferences.version=1
+encoding//src/huobi/Utils.py=utf-8
+encoding//src/huobi/api/huobiServiceApi.py=utf-8
+encoding//src/huobi/service.py=utf-8
+encoding//src/template/car_service/order/orderAdd.html=UTF-8
+encoding//src/template/car_service/order/orders.html=UTF-8
 encoding//src/template/index.html=UTF-8
 encoding//src/template/layout/foot.html=UTF-8
 encoding//src/template/layout/header.html=UTF-8
