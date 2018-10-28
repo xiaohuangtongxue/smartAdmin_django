@@ -1,2 +1,3 @@
 *.pyc
-/huobi/migrations/__pycache__/
+/huobi/migrations/__pycache__/*.pyc
+
