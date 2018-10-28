@@ -1,32 +1,15 @@
 {% load static %} 
 <!DOCTYPE html>
 <html lang="en-us">
+    <meta charset="utf-8">
 	{% include "layout/head.html" %} 
-	
 	<!-- #BODY -->
 	<body class="">
 		 {% include "layout/header.html" %} 
 		
 		<!-- #NAVIGATION -->
 		<!-- Left panel : Navigation area -->
-		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
 		<aside id="left-panel">
-
-			<!-- User info -->
-			<div class="login-info">
-				<span> <!-- User image size is adjusted inside CSS, it should stay as it --> 
-					
-					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
-						<img src="img/avatars/sunny.png" alt="me" class="online" /> 
-						<span>
-							john.doe 
-						</span>
-						<i class="fa fa-angle-down"></i>
-					</a> 
-					
-				</span>
-			</div>
-			<!-- end user info -->
 
 		{% include "layout/nav.html" %}
 
@@ -47,7 +30,7 @@
 
 				<!-- breadcrumb -->
 				<ol class="breadcrumb">
-					<li>Ö÷Ò³</li><li>Åä¼ş</li><li>Åä¼ş¹ÜÀí</li>
+					<li>ä¸»é¡µ</li><li>é…ä»¶</li><li>é…ä»¶ç®¡ç†</li>
 				</ol>
 				<!-- end breadcrumb -->
 
@@ -66,9 +49,9 @@
 							
 							<!-- PAGE HEADER -->
 							<i class="fa-fw fa fa-home"></i> 
-								Ö÷Ò³
+								ä¸»é¡µ
 							<span>>  
-								Åä¼ş
+								é…ä»¶
 							</span>
 						</h1>
 					</div>
@@ -90,7 +73,7 @@
 							<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-1" data-widget-editbutton="false">
 								<header>
 									<span class="widget-icon"> <i class="fa fa-table"></i> </span>
-									<h2>Åä¼şÇåµ¥</h2>
+									<h2>é…ä»¶æ¸…å•</h2>
 
 								</header>
 
@@ -112,7 +95,7 @@
 									        <thead>
 												<tr>
 													<th class="hasinput" style="width:10%">
-														<input type="text" class="form-control" placeholder="¹ıÂË±àºÅ" />
+														<input type="text" class="form-control" placeholder="è¿‡æ»¤ç¼–å·" />
 													</th>
 													<th class="hasinput" style="width:12%">
 														<input type="text" class="form-control" placeholder="Filter Cust ID" />
@@ -137,16 +120,16 @@
 												</tr>
 									            <tr>
 								                    <th data-class="expand">ID</th>
-								                    <th >±àºÅ</th>
-								                    <th data-hide="phone, tablet">Åä¼şÃû³Æ</th>
-								                    <th data-hide="phone, tablet">Æ·ÅÆ¼°¹æ¸ñ</th>
-								                    <th data-hide="phone,tablet">µ±Ç°¿â´æ</th>
-								                    <th data-hide="phone,tablet">°²È«¿â´æ</th>
-								                    <th data-hide="phone,tablet">µ¥Î»</th>
-								                    <th data-hide="phone,tablet">³É±¾¼Û</th>
-								                    <th data-hide="phone,tablet">ÏúÊÛ¼Û</th>
-								                    <th data-hide="phone,tablet">ÖÊ±£Ê±¼ä£¨ÔÂ£©</th>
-								                    <th>²Ù×÷</th>
+								                    <th >ç¼–å·</th>
+								                    <th data-hide="phone, tablet">é…ä»¶åç§°</th>
+								                    <th data-hide="phone, tablet">å“ç‰ŒåŠè§„æ ¼</th>
+								                    <th data-hide="phone,tablet">å½“å‰åº“å­˜</th>
+								                    <th data-hide="phone,tablet">å®‰å…¨åº“å­˜</th>
+								                    <th data-hide="phone,tablet">å•ä½</th>
+								                    <th data-hide="phone,tablet">æˆæœ¬ä»·</th>
+								                    <th data-hide="phone,tablet">é”€å”®ä»·</th>
+								                    <th data-hide="phone,tablet">è´¨ä¿æ—¶é—´ï¼ˆæœˆï¼‰</th>
+								                    <th>æ“ä½œ</th>
 									            </tr>
 									        </thead>
 
@@ -154,11 +137,11 @@
 											<tr>
 												<td>100</td>
 												<td>418-109-1913</td>
-												<td>ÂÖÌ¥</td>
-												<td>Ã×ÆäÁÖ</td>
+												<td>è½®èƒ</td>
+												<td>ç±³å…¶æ—</td>
 												<td>20</td>
 												<td>11</td>
-												<td>¸ö</td>
+												<td>ä¸ª</td>
 												<td>100</td>
 												<td>150</td>
 												<td>12</td>
@@ -308,7 +291,7 @@
 			    });
 			    
 			    // custom toolbar
-			    $("div.toolbar").html('<div class="text-right"><img src="img/logo.png" alt="SmartAdmin" style="width: 111px; margin-top: 3px; margin-right: 10px;"></div>');
+			    $("div.toolbar").html('<div class="text-right"><img src="/static/img/logo.png" alt="SmartAdmin" style="width: 111px; margin-top: 3px; margin-right: 10px;"></div>');
 			    	   
 			    // Apply the filter
 			    $("#datatable_fixed_column thead th input[type=text]").on( 'keyup change', function () {

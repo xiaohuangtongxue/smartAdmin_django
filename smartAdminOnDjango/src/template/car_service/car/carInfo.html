@@ -13,22 +13,6 @@
 		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
 		<aside id="left-panel">
 
-			<!-- User info -->
-			<div class="login-info">
-				<span> <!-- User image size is adjusted inside CSS, it should stay as it --> 
-					
-					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
-						<img src="img/avatars/sunny.png" alt="me" class="online" /> 
-						<span>
-							john.doe 
-						</span>
-						<i class="fa fa-angle-down"></i>
-					</a> 
-					
-				</span>
-			</div>
-			<!-- end user info -->
-
 		{% include "layout/nav.html" %}
 
 		</aside>
@@ -119,7 +103,7 @@
 														<input type="text" class="form-control" placeholder="按车牌号搜索" />
 													</th>
 													<th class="hasinput">
-														<input type="text" class="form-control" placeholder="Delivery Date" />
+														<input type="text" class="form-control" placeholder="车型" />
 													</th>
 													<th class="hasinput" style="width:12%">
 														<input type="text" class="form-control" placeholder="客户" />
@@ -132,9 +116,7 @@
 													</th>
 													<th></th>
 													<th></th>
-													<th class="hasinput" style="width:10%">
-														<input type="text" class="form-control" placeholder="Status Filter" />
-													</th>
+													<th></th>
 													<th class="hasinput icon-addon">
 														<input id="dateselect_filter" type="text" placeholder="建档时间" class="form-control datepicker" data-dateformat="yy/mm/dd">
 														<label for="dateselect_filter" class="glyphicon glyphicon-calendar no-margin padding-top-15" rel="tooltip" title="" data-original-title="建档时间"></label>
@@ -314,7 +296,7 @@
 			    });
 			    
 			    // custom toolbar
-			    $("div.toolbar").html('<div class="text-right"><img src="img/logo.png" alt="SmartAdmin" style="width: 111px; margin-top: 3px; margin-right: 10px;"></div>');
+			    $("div.toolbar").html('<div class="text-right"><img src="/static/img/logo.png" alt="SmartAdmin" style="width: 111px; margin-top: 3px; margin-right: 10px;"></div>');
 			    	   
 			    // Apply the filter
 			    $("#datatable_fixed_column thead th input[type=text]").on( 'keyup change', function () {

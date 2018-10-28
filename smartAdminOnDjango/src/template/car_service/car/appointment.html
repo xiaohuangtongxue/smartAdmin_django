@@ -1,6 +1,7 @@
 {% load static %} 
 <!DOCTYPE html>
 <html lang="en-us">
+    <meta charset="utf-8">
 	{% include "layout/head.html" %} 
 	
 	<!-- #BODY -->
@@ -11,22 +12,6 @@
 		<!-- Left panel : Navigation area -->
 		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
 		<aside id="left-panel">
-
-			<!-- User info -->
-			<div class="login-info">
-				<span> <!-- User image size is adjusted inside CSS, it should stay as it --> 
-					
-					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
-						<img src="img/avatars/sunny.png" alt="me" class="online" /> 
-						<span>
-							john.doe 
-						</span>
-						<i class="fa fa-angle-down"></i>
-					</a> 
-					
-				</span>
-			</div>
-			<!-- end user info -->
 
 		{% include "layout/nav.html" %}
 
@@ -47,7 +32,7 @@
 
 				<!-- breadcrumb -->
 				<ol class="breadcrumb">
-					<li>Ö÷Ò³</li><li>³µÁ¾</li><li>³µÁ¾µµ°¸</li>
+					<li>ä¸»é¡µ</li><li>è½¦è¾†</li><li>è½¦è¾†æ¡£æ¡ˆ</li>
 				</ol>
 				<!-- end breadcrumb -->
 
@@ -66,9 +51,9 @@
 							
 							<!-- PAGE HEADER -->
 							<i class="fa-fw fa fa-home"></i> 
-								Ö÷Ò³ 
+								ä¸»é¡µ 
 							<span>>  
-								³µÁ¾
+								è½¦è¾†
 							</span>
 						</h1>
 					</div>
@@ -90,7 +75,7 @@
 							<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-1" data-widget-editbutton="false">
 								<header>
 									<span class="widget-icon"> <i class="fa fa-table"></i> </span>
-									<h2>³µÁ¾ÁĞ±í </h2>
+									<h2>è½¦è¾†åˆ—è¡¨ </h2>
 
 								</header>
 
@@ -115,16 +100,16 @@
 														<input type="text" class="form-control" placeholder="D" />
 													</th>
 													<th class="hasinput" style="width:12%">
-														<input type="text" class="form-control" placeholder="°´³µÅÆºÅËÑË÷" />
+														<input type="text" class="form-control" placeholder="æŒ‰è½¦ç‰Œå·æœç´¢" />
 													</th>
 													<th class="hasinput">
 														<input type="text" class="form-control" placeholder="Delivery Date" />
 													</th>
 													<th class="hasinput" style="width:12%">
-														<input type="text" class="form-control" placeholder="ÁªÏµÈËr" />
+														<input type="text" class="form-control" placeholder="è”ç³»äººr" />
 													</th>
 													<th class="hasinput" style="width:10%">
-														<input type="text" class="form-control" placeholder="ÊÖ»úºÅ" />
+														<input type="text" class="form-control" placeholder="æ‰‹æœºå·" />
 													</th>
 													<th></th>
 													<th></th>
@@ -139,26 +124,26 @@
 												</tr>
 									            <tr>
 								                    <th data-class="expand">ID</th>
-								                    <th >³µÅÆºÅ</th>
-								                    <th data-hide="phone, tablet">³µĞÍ</th>
-								                    <th data-hide="phone, tablet">¿Í»§</th>
-								                    <th data-hide="phone,tablet">ÁªÏµÈË</th>
-								                    <th data-hide="phone,tablet">ÊÖ»úºÅÂë</th>
-								                    <th data-hide="phone,tablet">½ø³§´ÎÊı</th>
-								                    <th data-hide="phone,tablet">»¨·Ñ×Ü¶î</th>
-								                    <th data-hide="phone,tablet">Ç·¿îÓà¶î</th>
-								                    <th data-hide="phone,tablet">½¨µµÊ±¼ä</th>
-								                    <th>²Ù×÷</th>
+								                    <th >è½¦ç‰Œå·</th>
+								                    <th data-hide="phone, tablet">è½¦å‹</th>
+								                    <th data-hide="phone, tablet">å®¢æˆ·</th>
+								                    <th data-hide="phone,tablet">è”ç³»äºº</th>
+								                    <th data-hide="phone,tablet">æ‰‹æœºå·ç </th>
+								                    <th data-hide="phone,tablet">è¿›å‚æ¬¡æ•°</th>
+								                    <th data-hide="phone,tablet">èŠ±è´¹æ€»é¢</th>
+								                    <th data-hide="phone,tablet">æ¬ æ¬¾ä½™é¢</th>
+								                    <th data-hide="phone,tablet">å»ºæ¡£æ—¶é—´</th>
+								                    <th>æ“ä½œ</th>
 									            </tr>
 									        </thead>
 
 											<tbody>
 											<tr>
 												<td>100</td>
-												<td>¹ğEB12345</td>
+												<td>æ¡‚EB12345</td>
 												<td>SUV</td>
-												<td>·şÃ³¹«Ë¾</td>
-												<td>Íõ×Ü</td>
+												<td>æœè´¸å…¬å¸</td>
+												<td>ç‹æ€»</td>
 												<td>135123456789</td>
 												<td>5</td>
 												<td>3000</td>
@@ -310,7 +295,7 @@
 			    });
 			    
 			    // custom toolbar
-			    $("div.toolbar").html('<div class="text-right"><img src="img/logo.png" alt="SmartAdmin" style="width: 111px; margin-top: 3px; margin-right: 10px;"></div>');
+			    $("div.toolbar").html('<div class="text-right"><img src="/static/img/logo.png" alt="SmartAdmin" style="width: 111px; margin-top: 3px; margin-right: 10px;"></div>');
 			    	   
 			    // Apply the filter
 			    $("#datatable_fixed_column thead th input[type=text]").on( 'keyup change', function () {

@@ -13,22 +13,6 @@
 		<!-- Note: This width of the aside area can be adjusted through LESS variables -->
 		<aside id="left-panel">
 
-			<!-- User info -->
-			<div class="login-info">
-				<span> <!-- User image size is adjusted inside CSS, it should stay as it --> 
-					
-					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
-						<img src="img/avatars/sunny.png" alt="me" class="online" /> 
-						<span>
-							john.doe 
-						</span>
-						<i class="fa fa-angle-down"></i>
-					</a> 
-					
-				</span>
-			</div>
-			<!-- end user info -->
-
 		{% include "layout/nav.html" %}
 
 		</aside>
@@ -112,17 +96,16 @@
 					
 									        <thead>
 												<tr>
-													<th class="hasinput" style="width:10%">
-														<input type="text" class="form-control" placeholder="D" />
-													</th>
+													<th></th>
 													<th class="hasinput" style="width:12%">
 														<input type="text" class="form-control" placeholder="按车牌号搜索" />
 													</th>
+													<th></th>
 													<th class="hasinput">
-														<input type="text" class="form-control" placeholder="Delivery Date" />
+														<input type="text" class="form-control" placeholder="客户" />
 													</th>
 													<th class="hasinput" style="width:12%">
-														<input type="text" class="form-control" placeholder="联系人r" />
+														<input type="text" class="form-control" placeholder="联系人" />
 													</th>
 													<th class="hasinput" style="width:10%">
 														<input type="text" class="form-control" placeholder="手机号" />
@@ -145,7 +128,7 @@
 								                    <th data-hide="phone, tablet">客户</th>
 								                    <th data-hide="phone,tablet">联系人</th>
 								                    <th data-hide="phone,tablet">手机号码</th>
-								                    <th data-hide="phone,tablet">进厂次数</th>
+								                    <th>进厂次数</th>
 								                    <th data-hide="phone,tablet">花费总额</th>
 								                    <th data-hide="phone,tablet">欠款余额</th>
 								                    <th data-hide="phone,tablet">建档时间</th>
@@ -311,7 +294,7 @@
 			    });
 			    
 			    // custom toolbar
-			    $("div.toolbar").html('<div class="text-right"><img src="img/logo.png" alt="SmartAdmin" style="width: 111px; margin-top: 3px; margin-right: 10px;"></div>');
+			    $("div.toolbar").html('<div class="text-right"><img src="/static/img/logo.png" alt="SmartAdmin" style="width: 111px; margin-top: 3px; margin-right: 10px;"></div>');
 			    	   
 			    // Apply the filter
 			    $("#datatable_fixed_column thead th input[type=text]").on( 'keyup change', function () {

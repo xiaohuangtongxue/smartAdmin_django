@@ -52,7 +52,7 @@ def purchaseCompose(request):
     return HttpResponse(t.render())
 
 def purchaseReturn(request):
-    t = loader.get_template('car_service/purchase/purchaseCompose.html')
+    t = loader.get_template('car_service/purchase/purchaseReturn.html')
     return HttpResponse(t.render())
 
 def suppliers(request):
@@ -60,7 +60,7 @@ def suppliers(request):
     return HttpResponse(t.render())
 
 def composeStock(request):
-    t = loader.get_template('car_service/stock/composeWarm.html')
+    t = loader.get_template('car_service/stock/composeStock.html')
     return HttpResponse(t.render())
 
 def stockInOut(request):
